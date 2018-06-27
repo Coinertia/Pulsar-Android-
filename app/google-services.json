@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "552218891589",
+    "firebase_url": "https://pulsar-mobile-58e6e.firebaseio.com",
+    "project_id": "pulsar-mobile-58e6e",
+    "storage_bucket": "pulsar-mobile-58e6e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:552218891589:android:27a6b06c723ffa9b",
+        "android_client_info": {
+          "package_name": "com.pulsar.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "552218891589-p5bkca93psuo5905cfcvc318v96raouq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiFfc_SguhtSpZztepYr2spYHY_78XwpM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

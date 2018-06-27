@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants">
+
+    <LinearLayout
+        android:id="@+id/lyt_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@color/colorBaseColor"
+        android:padding="5px">
+
+        <TextView
+            android:id="@+id/tx_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="UNCONFIRMED TRANSACTIONS" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="10">
+
+            <TextView
+                android:id="@+id/tx_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:text="December 17,2017 at 13:34" />
+
+            <TextView
+                android:id="@+id/tx_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="end"
+                android:text="f 1.87548"
+                android:textStyle="bold|italic"
+                android:textAlignment="textEnd" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tx_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From:"
+                android:layout_alignParentLeft="true"/>
+
+            <EditText
+                android:id="@+id/tx_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tx_from"
+                android:layout_toLeftOf="@id/tx_amount_usd"
+                android:background="@android:color/transparent"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:editable="false"
+                android:focusedByDefault="false"
+                android:inputType="text"
+                android:lines="1"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tx_amount_usd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="432.23 USD" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

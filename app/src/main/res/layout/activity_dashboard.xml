@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBaseColor"
+    tools:context=".Activity.DashboardActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lyt_bottom"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/view_dashboard"
+            layout="@layout/view_dashboard"
+            android:visibility="visible" />
+        <include
+            android:id="@+id/view_swap"
+            layout="@layout/view_swap"
+            android:visibility="gone" />
+        <include
+            android:id="@+id/view_history"
+            layout="@layout/view_history"
+            android:visibility="gone" />
+        <include
+            android:id="@+id/view_more"
+            layout="@layout/view_more"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyt_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:weightSum="11">
+
+        <RadioGroup
+            android:id="@+id/rg_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:checkedButton="@+id/rb_dash"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="11">
+
+            <RadioButton
+                android:id="@+id/rb_dash"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@drawable/tab_button"
+                android:button="@null"
+                android:gravity="bottom|center"
+                android:paddingBottom="3dp"
+                android:text="Dashboard"
+                android:textColor="#fff"
+                android:textSize="6pt" />
+
+            <RadioButton
+                android:id="@+id/rb_swap"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@drawable/tab_button"
+                android:button="@null"
+                android:gravity="bottom|center"
+                android:paddingBottom="3dp"
+                android:text="Swap"
+                android:textColor="#fff"
+                android:textSize="6pt" />
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:button="@null"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#fff"
+                android:textSize="6pt" />
+
+            <RadioButton
+                android:id="@+id/rb_history"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@drawable/tab_button"
+                android:button="@null"
+                android:gravity="bottom|center"
+                android:paddingBottom="3dp"
+                android:text="History"
+                android:textColor="#fff"
+                android:textSize="6pt" />
+
+            <RadioButton
+                android:id="@+id/rb_more"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@drawable/tab_button"
+                android:button="@null"
+                android:gravity="bottom|center"
+                android:paddingBottom="3dp"
+                android:text="More"
+                android:textColor="#fff"
+                android:textSize="6pt" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingTop="3dp"
+        android:weightSum="11">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="2"
+            android:src="@drawable/img_btn_dash" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="2"
+            android:src="@drawable/img_btn_swap" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="3" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="2"
+            android:src="@drawable/img_btn_history" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="2"
+            android:src="@drawable/img_btn_more" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:weightSum="11">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_weight="3"
+            android:background="@drawable/btn_send"
+            android:onClick="gotoSendAcitivty"
+            android:text="Send"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="8pt" />
+    </LinearLayout>
+</RelativeLayout>
